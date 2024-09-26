@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.catalog {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+    height: 500px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    border: 2px solid #d5d5d5;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+.image-container {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.card img {
+    height: 100%;
+}
+
+input[type='submit'] {
+    width: 200px;
+    height: 30px;
+
+    background-color: #77b2ff;
+    color: #fff;
+
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: background-color .2s linear;
+}
+
+input[type='submit']:hover {
+    background-color: #4986da;
+}
+
+#category-form input[type='submit'] {
+    width: 100px;
+}
+
+select {
+    margin: 0 10px 20px 0;
+    padding: 10px;
+
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    outline: none;
+}

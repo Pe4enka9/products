@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.card {
+    display: flex;
+    gap: 30px;
+}
+
+.card_title {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card_title h1 {
+    margin-bottom: 30px;
+}
+
+.image_container {
+    width: 75%;
+
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #d5d5d5;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.image_container img {
+    width: 100%;
+}
+
+.description {
+    width: 50%;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.description h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
