@@ -1,5 +1,5 @@
 <?php
-$products = require './data.php';
+$products = require $_SERVER['DOCUMENT_ROOT'] . '/products/data.php';
 
 $product = array_filter($products, function ($card) {
     if ($_GET['id'] == $card['id']) return true;
@@ -8,7 +8,7 @@ $product = array_filter($products, function ($card) {
 $product = reset($product);
 
 if (!$product['published']) {
-    die('<img src="./uploads/404.png" alt="Error">');
+    die('<img src="uploads/404.png" alt="Error">');
 }
 ?>
 
@@ -30,11 +30,11 @@ if (!$product['published']) {
         <div class="card_title">
             <h1><?= $product['name'] ?></h1>
             <?php if (!empty($product['image'])): ?>
-            <?php foreach ($product['image'] as $image): ?>
-                <div class="image_container">
-                    <img src="./<?= $image ?>" alt="<?= $product['name'] ?>">
-                </div>
-            <?php endforeach; ?>
+                <?php foreach ($product['image'] as $image): ?>
+                    <div class="image_container">
+                        <img src="./<?= $image ?>" alt="<?= $product['name'] ?>">
+                    </div>
+                <?php endforeach; ?>
             <?php else: ?>
                 <div class="image_container">
                     <img src="./uploads/no_image.webp" alt="Нет фото">

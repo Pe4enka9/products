@@ -17,7 +17,7 @@ $currentCategory = $_GET["category"] ?? 'all';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Инструменты</title>
 </head>
 <body>
@@ -25,7 +25,7 @@ $currentCategory = $_GET["category"] ?? 'all';
 <div class="container">
     <h1>Каталог</h1>
 
-    <form action="./" method="get" id="category-form">
+    <form method="get" id="category-form">
         <select name="category">
             <option value="all" selected>Без фильтра</option>
             <?php foreach ($categoriesNoRepeat as $category): ?>
@@ -53,10 +53,7 @@ $currentCategory = $_GET["category"] ?? 'all';
                         <?php endif; ?>
                     </div>
 
-                    <form action="./more.php" method="get">
-                        <input type="hidden" name="id" value="<?= $product['id'] ?>">
-                        <input type="submit" value="Подробнее">
-                    </form>
+                    <a href="./more.php?id=<?= $product['id'] ?>">Подробнее</a>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>

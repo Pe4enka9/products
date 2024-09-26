@@ -58,9 +58,13 @@ h1 {
     height: 100%;
 }
 
-input[type='submit'] {
+a {
     width: 200px;
     height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: #77b2ff;
     color: #fff;
@@ -72,12 +76,14 @@ input[type='submit'] {
 
     font-size: 18px;
 
+    text-decoration: none;
+
     cursor: pointer;
 
     transition: background-color .2s linear;
 }
 
-input[type='submit']:hover {
+a:hover {
     background-color: #4986da;
 }
 
